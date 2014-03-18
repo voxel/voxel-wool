@@ -1,0 +1,6 @@
+# voxel-wool
+
+## License
+
+MIT
+
