@@ -1,13 +1,15 @@
 {
   "name": "voxel-wool",
-  "description": "",
+  "description": "colored wool blocks and block metadata example (voxel.js plugin)",
   "version": "0.0.1",
   "repository": {
     "type": "git",
     "url": "git@github.com:deathcap/voxel-wool.git"
   },
   "keywords": [
-    "voxel"
+    "voxel",
+    "wool",
+    "blocks"
   ],
   "dependencies": {
     "ucfirst": "0.0.1"
