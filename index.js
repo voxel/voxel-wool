@@ -20,7 +20,7 @@ WoolPlugin.prototype.enable = function() {
     var color = this.colors[i];
 
     // TODO: switch to registerBlocks()
-    this.registry.registerBlock('wool' + ucfirst(color), {texture: 'wool_colored_'+color});
+    this.registry.registerBlock('wool' + ucfirst(color), {texture: 'wool_colored_'+color, displayName: ucfirst(color) + ' Wool'});
   }
 };
 
