@@ -24,6 +24,9 @@
 
     WoolPlugin.prototype.enable = function() {
       return this.registry.registerBlocks('wool', this.colors.length, {
+        names: this.colors.map(function(color) {
+          return 'wool' + ucfirst(color);
+        }),
         texture: (function(_this) {
           return function(offset) {
             var _ref;
