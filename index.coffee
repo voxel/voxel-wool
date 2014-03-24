@@ -15,6 +15,7 @@ class WoolPlugin
       names: @colors.map (color) -> 'wool' + ucfirst(color)
       texture: (offset) => 'wool_colored_' + (@colors[offset] ? @colors[0])
       displayName: (offset) => ucfirst(@colors[offset]) + ' Wool'
+      creativeTab: 'decorative'
 
   disable: () ->
     # TODO: remove blocks

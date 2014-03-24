@@ -37,7 +37,8 @@
           return function(offset) {
             return ucfirst(_this.colors[offset]) + ' Wool';
           };
-        })(this)
+        })(this),
+        creativeTab: 'decorative'
       });
     };
 
