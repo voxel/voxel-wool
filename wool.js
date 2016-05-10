@@ -1,22 +1,29 @@
+'use strict';
 
-ucfirst = require 'ucfirst'
+const ucfirst = require('ucfirst');
 
-module.exports = (game, opts) -> new WoolPlugin(game, opts)
+module.exports = (game, opts) => new WoolPlugin(game, opts);
 
-class WoolPlugin
-  constructor: (game, opts) ->
-    @registry = game.plugins.get('voxel-registry') ? throw new Error('voxel-wool requires voxel-registry plugin')
-    @colors = ['black', 'blue', 'brown', 'cyan', 'gray', 'green', 'light_blue', 'lime', 'magenta', 'orange', 'pink', 'purple', 'red', 'silver', 'white', 'yellow']  # TODO: order?
+class WoolPlugin {
+  constructor(game, opts) {
+    this.registry = game.plugins.get('voxel-registry');
+    if (!this.registry) throw new Error('voxel-wool requires voxel-registry plugin');
 
-    @enable()
+    this.colors = ['black', 'blue', 'brown', 'cyan', 'gray', 'green', 'light_blue', 'lime', 'magenta', 'orange', 'pink', 'purple', 'red', 'silver', 'white', 'yellow'];  // TODO: order?
 
-  enable: () ->
-    @registry.registerBlocks 'wool', @colors.length,
-      names: @colors.map (color) -> 'wool' + ucfirst(color)
-      texture: (offset) => 'wool_colored_' + (@colors[offset] ? @colors[0])
-      displayName: (offset) => ucfirst(@colors[offset]) + ' Wool'
-      creativeTab: 'decorative'
+    this.enable();
+  }
 
-  disable: () ->
-    # TODO: remove blocks
+  enable() {
+    this.registry.registerBlocks('wool', this.colors.length, {
+      names: this.colors.map((color) => 'wool' + ucfirst(color)),
+      texture: (offset) => 'wool_colored_' + (this.colors[offset] || this.colors[0]),
+      displayName: (offset) => ucfirst(this.colors[offset]) + ' Wool',
+      creativeTab: 'decorative',
+    });
+  }
 
+  disable() {
+    // TODO: remove blocks
+  }
+}

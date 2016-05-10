@@ -17,10 +17,5 @@
   "dependencies": {
     "ucfirst": "0.0.1"
   },
-  "browserify": {
-    "transform": [
-      "coffeeify"
-    ]
-  },
   "license": "MIT"
 }
