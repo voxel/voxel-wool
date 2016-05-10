@@ -1,7 +1,7 @@
 {
   "name": "voxel-wool",
   "description": "colored wool blocks and block metadata example (voxel.js plugin)",
-  "version": "0.1.2",
+  "version": "1.0.0",
   "main": "wool.js",
   "repository": {
     "type": "git",
