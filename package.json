@@ -2,7 +2,7 @@
   "name": "voxel-wool",
   "description": "colored wool blocks and block metadata example (voxel.js plugin)",
   "version": "0.1.2",
-  "main": "wool.coffee",
+  "main": "wool.js",
   "repository": {
     "type": "git",
     "url": "git@github.com:deathcap/voxel-wool.git"
@@ -16,11 +16,6 @@
   ],
   "dependencies": {
     "ucfirst": "0.0.1"
-  },
-  "browserify": {
-    "transform": [
-      "coffeeify"
-    ]
   },
   "license": "MIT"
 }
